@@ -1,8 +1,7 @@
 package com.pioneers.datastructures.arraylist;
 
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.List;
+import java.util.*;
+import java.util.stream.Collectors;
 
 public class ProblemSolving {
     public static void main(String[] args) {
@@ -10,12 +9,36 @@ public class ProblemSolving {
 
         List<Integer> distinctList = distinct(list);
 
-        List<Integer> sorteddistinctList = sortBestPractice(distinctList);
+        List<Integer> sortedDistinctList = sortBestPractice(distinctList);
 
-        printList(sorteddistinctList);
+        printList(sortedDistinctList);
+
+        System.out.println();
+        List<Integer> evenNumbers = getEvenNumbers(sortedDistinctList);
+        printList(evenNumbers);
+
+        System.out.println();
+
+        int firstNumber = findFirstNumber(evenNumbers);
+        System.out.println(firstNumber);
     }
 
+    // TODO: Create a method to find the first even number
 
+
+    public static int findFirstNumber(List<Integer> list) {
+        return list.getFirst();
+    }
+
+    public static List<Integer> getEvenNumbers(List<Integer> list) {
+        List<Integer> evenNumbers = new ArrayList<>();
+        list.forEach(number -> {
+            if (number % 2 == 0) {
+                evenNumbers.add(number);
+            }
+        });
+        return evenNumbers;
+    }
 
     // Achieves Mutation Reference (Very very very very very very bad practice)
     public static void sortBadPractice(List<Integer> distinctList) {
@@ -45,4 +68,10 @@ public class ProblemSolving {
         }
         return uniqueList;
     }
+
+    private static List<Integer> distinct2(List<Integer> list) {
+        Set<Integer> set = new HashSet<>(list);
+        return set.stream().toList();
+    }
+
 }
