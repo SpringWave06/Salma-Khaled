@@ -1,6 +1,6 @@
 package com.pioneers.rest.controller;
 
-import com.pioneers.rest.model.dto.StudentRequest;
+import com.pioneers.rest.model.dto.StudentSignupDto;
 import org.springframework.web.bind.annotation.*;
 
 @RestController
@@ -32,9 +32,9 @@ public class WelcomeController {
 
     // Pass variable by Request Body
     @GetMapping("studentWithRequestBody")
-    public String welcomeStudentWithRequestBodyApi(@RequestBody StudentRequest studentRequest) {
-        return "<h1>Welcome " + studentRequest.getName() + " to Tech Pioneers Hub!, Age = " +
-                studentRequest.getAge() + ", Address = " + studentRequest.getAddress() + ", Password = " +
-                studentRequest.getPassword() + "</h1>";
+    public String welcomeStudentWithRequestBodyApi(@RequestBody StudentSignupDto studentSignupDto) {
+        return "<h1>Welcome " + studentSignupDto.getName() + " to Tech Pioneers Hub!, Age = " +
+                studentSignupDto.getAge() + ", Address = " + studentSignupDto.getAddress() + ", Password = " +
+                studentSignupDto.getPassword() + "</h1>";
     }
 }

@@ -2,14 +2,16 @@ package com.pioneers.rest.model.dto;
 
 import java.util.Objects;
 
-public class StudentRequest {
+public class StudentSignupDto {
     private String name;
+    private String email;
     private Integer age;
     private String address;
     private String password;
 
-    public StudentRequest(String name, Integer age, String address, String password) {
+    public StudentSignupDto(String name, String email, Integer age, String address, String password) {
         this.name = name;
+        this.email = email;
         this.age = age;
         this.address = address;
         this.password = password;
@@ -21,6 +23,14 @@ public class StudentRequest {
 
     public void setName(String name) {
         this.name = name;
+    }
+
+    public String getEmail() {
+        return email;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
     }
 
     public Integer getAge() {
@@ -50,8 +60,9 @@ public class StudentRequest {
     @Override
     public boolean equals(Object o) {
         if (o == null || getClass() != o.getClass()) return false;
-        StudentRequest that = (StudentRequest) o;
+        StudentSignupDto that = (StudentSignupDto) o;
         return Objects.equals(name, that.name) &&
+                Objects.equals(email, that.email) &&
                 Objects.equals(age, that.age) &&
                 Objects.equals(address, that.address) &&
                 Objects.equals(password, that.password);
@@ -59,15 +70,15 @@ public class StudentRequest {
 
     @Override
     public int hashCode() {
-        return Objects.hash(name, age, address, password);
+        return Objects.hash(name, email, age, address, password);
     }
 
     @Override
     public String toString() {
-        return "StudentDto{" +
+        return "StudentSignupDto{" +
                 "name='" + name + '\'' +
+                ", email='" + email + '\'' +
                 ", age=" + age +
-                ", address='" + address + '\'' +
                 '}';
     }
 }
