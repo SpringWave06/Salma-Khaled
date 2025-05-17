@@ -21,6 +21,13 @@ import static com.pioneers.refactor.util.transformation.StudentTransformation.to
 @RequestMapping("student")
 public class StudentController {
 
+    // Build time
+    // 1- Create this line: StudentController studentController = new StudentController();
+    // 2- Put studentController in the Application Context (Container)
+
+    // Runtime
+    // 1- studentController.signUpApi(studentSignUpDto)
+
     @PostMapping("signup")
     public ResponseEntity<String> signUpApi(@RequestBody StudentSignUpDto studentSignUpDto) {
         if (!StudentValidator.isEmailValidated(studentSignUpDto) || !StudentValidator.isNameValidated(studentSignUpDto)) {
