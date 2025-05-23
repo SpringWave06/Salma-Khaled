@@ -7,7 +7,7 @@ import com.pioneers.refactor.model.dto.StudentSignUpDto;
  *
  * @author Abdelaziz Said
  */
-public class StudentValidator {
+public final class StudentValidator {
 
     private StudentValidator() {
         throw new IllegalStateException("StudentValidator is a Utility class");

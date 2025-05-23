@@ -1,15 +1,14 @@
 package com.pioneers.refactor.util.singleton;
 
-import org.springframework.stereotype.Component;
-
-@Component
 public class DbConnectionBean {
-    private String url = "jdbc://localhost:3306/db";
-    private String username = "root";
-    private String password = "123";
+    private String url;
+    private String username;
+    private String password;
 
-    public DbConnectionBean() {
-        System.out.println("DbConnectionBean() constructor called");
+    public DbConnectionBean(String url, String username, String password) {
+        this.url = url;
+        this.username = username;
+        this.password = password;
     }
 
     public void connect() {

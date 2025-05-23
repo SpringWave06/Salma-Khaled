@@ -22,13 +22,13 @@ public class DbController1 {
 
     // Setter Injection by Autowired
     /*@Autowired
-    public void setDbConnection(DbConnection dbConnection) {
+    public void setDbConnection(DbConnectionBean dbConnection) {
         this.dbConnection = dbConnection;
-    }*/
+    }
 
     // Field Injection
-    /*@Autowired
-    private DbConnection dbConnection;*/
+    @Autowired
+    private DbConnectionBean dbConnection;*/
 
     @PostMapping("connect")
     public void connectApi() {

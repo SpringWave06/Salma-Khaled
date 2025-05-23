@@ -7,7 +7,7 @@ import java.util.UUID;
  *
  * @author Abdelaziz Said
  */
-public class Utils {
+public final class Utils {
 
     private Utils() {
         throw new IllegalStateException("Utils is a Utility class");
