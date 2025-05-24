@@ -1,18 +1,18 @@
-package com.pioneers.refactor.util.singleton;
+package com.pioneers.refactor.util.pattern.singleton;
 
-public class DbConnectionThreadSafe {
+public class DbConnectionLazy {
     private String url = "jdbc://localhost:3306/db";
     private String username = "root";
     private String password = "123";
 
-    private static DbConnectionThreadSafe dbConnection;
+    private static DbConnectionLazy dbConnection;
 
-    private DbConnectionThreadSafe() {
+    private DbConnectionLazy() {
     }
 
-    public static synchronized DbConnectionThreadSafe getInstance() {
+    public static DbConnectionLazy getInstance() {
         if (dbConnection == null) {
-            dbConnection = new DbConnectionThreadSafe();
+            dbConnection = new DbConnectionLazy();
         }
         return dbConnection;
     }

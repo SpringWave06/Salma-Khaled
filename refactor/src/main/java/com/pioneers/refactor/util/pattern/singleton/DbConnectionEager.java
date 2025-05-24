@@ -1,14 +1,17 @@
-package com.pioneers.refactor.util.singleton;
+package com.pioneers.refactor.util.pattern.singleton;
 
-public enum DbConnectionEnum {
-    INSTANCE;
-
+public class DbConnectionEager {
     private String url = "jdbc://localhost:3306/db";
     private String username = "root";
     private String password = "123";
 
-    public static DbConnectionEnum getInstance() {
-        return INSTANCE;
+    private static final DbConnectionEager DB_CONNECTION = new DbConnectionEager();
+
+    public DbConnectionEager() {
+    }
+
+    public static DbConnectionEager getInstance() {
+        return DB_CONNECTION;
     }
 
     public void connect() {

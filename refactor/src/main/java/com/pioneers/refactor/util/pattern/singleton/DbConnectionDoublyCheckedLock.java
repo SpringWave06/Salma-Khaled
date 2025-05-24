@@ -1,4 +1,4 @@
-package com.pioneers.refactor.util.singleton;
+package com.pioneers.refactor.util.pattern.singleton;
 
 public class DbConnectionDoublyCheckedLock {
     private String url = "jdbc://localhost:3306/db";

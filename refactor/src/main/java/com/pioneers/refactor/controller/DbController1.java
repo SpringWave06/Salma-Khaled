@@ -1,12 +1,14 @@
 package com.pioneers.refactor.controller;
 
-import com.pioneers.refactor.util.singleton.DbConnectionBean;
+import com.pioneers.refactor.util.pattern.singleton.DbConnectionBean;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+@Slf4j
 @RestController
 @RequestMapping("db1")
 public class DbController1 {
@@ -16,8 +18,9 @@ public class DbController1 {
     // Constructor Injection by Autowired
     @Autowired
     public DbController1(DbConnectionBean dbConnection) {
-        System.out.println("I am in DbController1!!");
+        log.trace("I am instantiating DbController1 inside the Application Context");
         this.dbConnection = dbConnection;
+        log.trace("dbConnection is injected inside DbController1");
     }
 
     // Setter Injection by Autowired
