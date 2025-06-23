@@ -13,8 +13,6 @@ import org.springframework.stereotype.Service;
 
 import java.util.Optional;
 
-import static com.pioneers.service.util.StudentValidator.isEmailValidated;
-import static com.pioneers.service.util.StudentValidator.isNameValidated;
 import static com.pioneers.service.util.transformation.StudentTransformation.toRegisteredStudent;
 
 @Slf4j
