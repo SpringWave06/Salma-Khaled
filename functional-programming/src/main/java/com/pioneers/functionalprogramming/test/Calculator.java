@@ -4,6 +4,13 @@ import lombok.experimental.UtilityClass;
 
 @UtilityClass
 public class Calculator {
+    /**
+     * Add two integer numbers.
+     *
+     * @param a is the first argument for summation.
+     * @param b is the second argument for summation.
+     * @return is the result of adding the first and the second parameters.
+     */
     public static Integer add(Integer a, Integer b) {
         return a + b;
     }

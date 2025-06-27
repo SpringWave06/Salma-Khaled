@@ -1,7 +1,7 @@
-package com.pioneers.functionalprogramming.service;
+package com.pioneers.functionalprogramming.discountengine.service;
 
-import com.pioneers.functionalprogramming.model.dto.Order;
-import com.pioneers.functionalprogramming.rule.DiscountRule;
+import com.pioneers.functionalprogramming.discountengine.model.dto.Order;
+import com.pioneers.functionalprogramming.discountengine.rule.DiscountRule;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

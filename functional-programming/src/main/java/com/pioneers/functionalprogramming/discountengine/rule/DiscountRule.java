@@ -1,6 +1,6 @@
-package com.pioneers.functionalprogramming.rule;
+package com.pioneers.functionalprogramming.discountengine.rule;
 
-import com.pioneers.functionalprogramming.model.dto.Order;
+import com.pioneers.functionalprogramming.discountengine.model.dto.Order;
 
 import java.math.BigDecimal;
 

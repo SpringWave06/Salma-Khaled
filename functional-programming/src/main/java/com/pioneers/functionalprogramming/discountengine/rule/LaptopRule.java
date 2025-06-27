@@ -1,7 +1,7 @@
-package com.pioneers.functionalprogramming.rule;
+package com.pioneers.functionalprogramming.discountengine.rule;
 
-import com.pioneers.functionalprogramming.model.dto.Order;
-import com.pioneers.functionalprogramming.model.dto.Product;
+import com.pioneers.functionalprogramming.discountengine.model.dto.Order;
+import com.pioneers.functionalprogramming.discountengine.model.dto.Product;
 import org.springframework.stereotype.Component;
 
 import java.math.BigDecimal;

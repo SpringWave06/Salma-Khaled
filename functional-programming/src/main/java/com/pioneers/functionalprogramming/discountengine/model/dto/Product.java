@@ -1,4 +1,4 @@
-package com.pioneers.functionalprogramming.model.dto;
+package com.pioneers.functionalprogramming.discountengine.model.dto;
 
 import java.math.BigDecimal;
 
