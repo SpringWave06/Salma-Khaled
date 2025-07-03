@@ -20,8 +20,6 @@ public record StudentDto(
         @Max(value = 100, message = "Degree cannot be more than 100")
         Float degree,
         @Pattern(regexp = "^(male|female)$", message = "Gender must be male or female only")
-        String gender,
-        @Min(value = 18, message = "min age is 18")
-        Integer age
+        String gender
 ) {
 }
