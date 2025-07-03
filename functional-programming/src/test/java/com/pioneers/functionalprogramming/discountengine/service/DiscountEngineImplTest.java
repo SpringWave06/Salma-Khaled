@@ -62,6 +62,7 @@ class DiscountEngineImplTest {
 		verify(bulkItemRule).apply(order, BigDecimal.valueOf(49700));
 	}
 
+	
 	// TODO: Create a unit test for the order includes 6 Mouses and 1 Laptop with 40000 price
 	@Test
 	void testLaptop40000And6Mouses() {
